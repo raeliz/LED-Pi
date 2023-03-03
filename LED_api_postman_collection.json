@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "dbfa7fbf-6d51-4961-ae40-e4589f843bc6",
+		"name": "LED_api_postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "all LEDs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "192.168.1.155/leds",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"155"
+					],
+					"path": [
+						"leds"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LED detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "192.168.1.155/leds/:color",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"155"
+					],
+					"path": [
+						"leds",
+						":color"
+					],
+					"variable": [
+						{
+							"key": "color",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LED on",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "192.168.1.155/leds/:color/on",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"155"
+					],
+					"path": [
+						"leds",
+						":color",
+						"on"
+					],
+					"variable": [
+						{
+							"key": "color",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LED off",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "192.168.1.155/leds/:color/off",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"155"
+					],
+					"path": [
+						"leds",
+						":color",
+						"off"
+					],
+					"variable": [
+						{
+							"key": "color",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LED lightshow",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "192.168.1.155/leds/lightshow",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"155"
+					],
+					"path": [
+						"leds",
+						"lightshow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bonus: morsecode",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"message\": \"peanut\"\n}"
+				},
+				"url": {
+					"raw": "192.168.1.155/leds/morsecode",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"155"
+					],
+					"path": [
+						"leds",
+						"morsecode"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
