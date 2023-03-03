@@ -7,10 +7,9 @@ import json
 
 GPIO.setmode(GPIO.BOARD)
 
-# constructor
-
 
 class Led(object):
+    # constructor
     def __init__(self, pin, color):
         self.pin = pin
         self.color = color
@@ -41,9 +40,8 @@ lights = {
     "yellow": Led(31, "yellow")
 }
 
+
 # helpers :)
-
-
 def turn_all_on():
     for led in lights.values():
         led.on()
